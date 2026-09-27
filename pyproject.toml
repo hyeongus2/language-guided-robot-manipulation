@@ -1,0 +1,22 @@
+[build-system]
+requires=["setuptools>=68"]
+build-backend="setuptools.build_meta"
+
+[project]
+name="language-guided-robot-manipulation"
+version="0.1.0"
+requires-python=">=3.10"
+dependencies=["numpy", "scipy", "google-genai"]
+
+[project.scripts]
+robot-task-runner="final_project_runner:main"
+robot-planning-camera="capture_camera:main"
+
+[tool.setuptools]
+py-modules=["final_project_runner","run_action_group","capture_camera"]
+
+[tool.setuptools.packages.find]
+include=["manipulation*"]
+
+[tool.setuptools.package-data]
+manipulation=["geometry.json"]
