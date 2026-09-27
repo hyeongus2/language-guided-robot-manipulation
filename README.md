@@ -42,3 +42,10 @@ markerless 실행 전 rectified RGB와 RGB에 정렬된 depth 및 CameraInfo의 
 ROS 초기화를 진입점 하나로 모으고 background executor가 runner와 grasp callback을 처리하도록 구성했습니다. navigation 성공 확인 뒤 상태를 바꾸고 pick/place 실패 시 계획을 멈춥니다. action 부재·중단·servo 조회 실패를 명시적으로 전달합니다. depth의 16UC1/32FC1·endianness·stride를 구분하고 프레임·시각·intrinsics를 검사합니다. IK 후 관절값을 잘라 실행하지 않고 bounds와 최종 FK 오차를 확인합니다.
 
 현재 확인한 결과는 Python 문법, 깊이 변환·동기화 계약, FK/IK 합성 왕복 등의 장비 없는 검사입니다. ROS graph·실제 카메라·servo·Nav2·Gemini API와 로봇 집기는 이 공개판으로 다시 시험하지 않았습니다. 한 학기 수행과 당시 시연은 과거 경험이며 공개판의 실기기 재검증과 구분합니다.
+
+## 시연 자료
+
+- [2025-11-01 ArUco 집기·놓기 실습](https://drive.google.com/file/d/1jFSeSVtTVsvS1iWjP8NCCWp-PvL8udkh/view): marker 기반 manipulation lab 영상입니다. 학생증 도입부 4초를 제외한 공개 사본입니다.
+- [2025-12-05 Offline RL 로봇팔 실습](https://drive.google.com/file/d/1RbyEvCyg_KMFjWTKeGe2Cddf7d9G8XIx/view): 학기 중 Offline RL lab 영상입니다. 전체 내용을 유지한 브라우저 재생용 사본입니다.
+
+두 영상은 각각의 학기 실습 기록입니다. 언어 지시부터 이어진 최종 종합 시연이나 공개판 markerless 코드의 실기기 재검증 영상으로 표시하지 않습니다.
